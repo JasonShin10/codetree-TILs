@@ -26,7 +26,7 @@ int main() {
                 ans++;
                 break;
             }
-            if (j - 1 > 0)
+            if (j> 0)
             {
                 if (arr[i][j - 1] == arr[i][j])
                 {
@@ -51,7 +51,7 @@ int main() {
                 ans++;
                 break;
             }
-            if (j - 1 > 0)
+            if (j> 0)
             {
                 if (arr[j - 1][i] == arr[j][i])
                 {
