@@ -2,7 +2,7 @@
 #include <climits>
 
 using namespace std;
-int cnt;
+
 int main() {
     int N;
     int arr[20][20];
@@ -19,14 +19,14 @@ int main() {
     {
         for(int j=0; j<N; j++)
         {
-            if(i+2<=N && j+2<=N)
+            if(i+2<N && j+2<N)
             {
-                cnt=0;
-               for(int k=i; k<i+2; k++)
+                int cnt=0;
+               for(int k=i; k<=i+2; k++)
                {
-               for(int l=j; l<j+2; l++)
+               for(int l=j; l<=j+2; l++)
                {
-                if(arr[k][l] = 1)
+                if(arr[k][l] == 1)
                 {
                     cnt++;
                 }
