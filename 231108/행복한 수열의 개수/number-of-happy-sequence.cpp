@@ -32,6 +32,8 @@ int main() {
                     if(rCnt >= m-1)
                     {
                         ans++;
+                        rCnt=0;
+                        break;
                     }
                         rCnt=0;
                 }
@@ -43,6 +45,8 @@ int main() {
                     if(cCnt >= m-1)
                     {
                         ans++;
+                        cCnt=0;
+                        break;
                     }
                         cCnt=0;
                 }
