@@ -4,8 +4,8 @@ using namespace std;
 int main() {
     int n, m;
     cin >> n >> m;
-    int rCnt = 0;
-    int cCnt = 0;
+    int rCnt = 1;
+    int cCnt = 1;
     bool rSame = false;
     bool cSame = false;
     int ans = 0;
@@ -34,13 +34,13 @@ int main() {
                 }
                 else
                 {
-                    if (rCnt >= m - 1)
+                    if (rCnt >= m)
                     {
                         ans++;
-                        rCnt = 0;
+                        rCnt = 1;
                         break;
                     }
-                    rCnt = 0;
+                    rCnt = 1;
                 }
             }
         }
@@ -59,13 +59,13 @@ int main() {
                 }
                 else 
                 {
-                    if (cCnt >= m - 1)
+                    if (cCnt >= m)
                     {
                         ans++;
-                        cCnt = 0;
+                        cCnt = 1;
                         break;
                     }
-                    cCnt = 0;
+                    cCnt = 1;
                 }
             }
         }
