@@ -10,6 +10,7 @@ int main() {
     bool cSame = false;
     int ans = 0;
     int arr[100][100];
+
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -17,17 +18,17 @@ int main() {
             cin >> arr[i][j];
         }
     }
+        if (m == 1) 
+        {
+        cout << 2 * n; 
+        return 0;
+    }
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
+        rCnt = 1;
+        for (int j = 1; j < n; j++)
         {
-            if (m == 1)
-            {
-                ans++;
-                break;
-            }
-            if (j> 0)
-            {
+        
                 if (arr[i][j - 1] == arr[i][j])
                 {
                     rCnt++;
@@ -37,24 +38,17 @@ int main() {
                     if (rCnt >= m)
                     {
                         ans++;
-                        rCnt = 1;
                         break;
                     }
                     rCnt = 1;
                 }
-                if (rCnt >= m) ans++;
-            }
+            
         }
-        for (int j = 0; j < n; j++)
-        {
-            if (m == 1)
-            {
-                ans++;
-                break;
-            }
-            if (j> 0)
-            {
-                if (arr[j - 1][i] == arr[j][i])
+        if (rCnt >= m) ans++;
+        cCnt = 1;
+        for (int j = 1; j < n; j++)
+        {        
+             if (arr[j - 1][i] == arr[j][i])
                 {
                     cCnt++;
                 }
@@ -63,14 +57,12 @@ int main() {
                     if (cCnt >= m)
                     {
                         ans++;
-                        cCnt = 1;
                         break;
                     }
                     cCnt = 1;
-                }
-                if (cCnt >= m) ans++;
-            }
+                }  
         }
+        if (cCnt >= m) ans++;
 
     }
     cout << ans;
