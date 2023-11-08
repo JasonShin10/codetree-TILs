@@ -42,6 +42,7 @@ int main() {
                     }
                     rCnt = 1;
                 }
+                if (rCnt >= m) ans++;
             }
         }
         for (int j = 0; j < n; j++)
@@ -67,6 +68,7 @@ int main() {
                     }
                     cCnt = 1;
                 }
+                if (cCnt >= m) ans++;
             }
         }
 
