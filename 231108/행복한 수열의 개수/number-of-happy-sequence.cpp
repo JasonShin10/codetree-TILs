@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#degine MAX_N 100
+#define MAX_N 100
 
 int n,m;
 int grid[MAX_N][MAX_N];
@@ -37,7 +37,8 @@ int main() {
     }
     int num_happy =0;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         for( int j =0; j<n;j++)
         {
             seq[j] = grid[i][j];
