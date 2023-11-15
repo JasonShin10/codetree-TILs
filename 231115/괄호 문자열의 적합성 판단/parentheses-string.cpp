@@ -18,7 +18,7 @@ int main() {
         break;
         cout << "No";
         }
-        else if(st.empty() && s[i] == ')')
+        else if(!st.empty() && s[i] == ')')
         {
             st.pop();
         }
