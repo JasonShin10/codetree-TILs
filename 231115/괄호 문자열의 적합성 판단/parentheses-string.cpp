@@ -16,9 +16,9 @@ int main() {
         }
         else if(st.empty() && s[i] ==')')
         {
-        break;
         noMatch =true;
         cout << "No";
+        break;
         }
         else if(!st.empty() && s[i] == ')')
         {
