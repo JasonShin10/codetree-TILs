@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     string s;
     cin >> s;
+    bool noMatch = false;
     stack<char> st;
     for(int i=0; i<s.size(); i++)
     {
@@ -16,6 +17,7 @@ int main() {
         else if(st.empty() && s[i] ==')')
         {
         break;
+        noMatch =true;
         cout << "No";
         }
         else if(!st.empty() && s[i] == ')')
@@ -23,7 +25,7 @@ int main() {
             st.pop();
         }
     }
-    if (st.empty())
+    if (st.empty() && noMatch == false)
     {
         cout << "Yes";
     }
